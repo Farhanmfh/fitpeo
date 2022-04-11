@@ -1,0 +1,46 @@
+.nav-bar {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #800080;
+}
+
+.nav-bar > .nav-logo {
+  margin: 50px;
+}
+
+.nav-bar > .nav-items > a {
+  color: #ffffff;
+  font-size: 16px;
+  text-decoration: none;
+  margin: 15px;
+  position: relative;
+  opacity: 0.9;
+}
+
+.nav-bar > .nav-items > a:hover {
+  opacity: 1;
+}
+
+.nav-bar > .nav-items > a:hover::before {
+  width: 100%;
+}
+
+.tour-button {
+  text-decoration: none;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  margin: 15px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  cursor:pointer;
+  opacity: 0.9;
+}
+
+.tour-button:hover{
+    opacity: 1;
+}

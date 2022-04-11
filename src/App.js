@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import PlaceInfo from "./components/PalceCard";
+import NavBar from "./components/Navbar";
 
 function App() {
+  const [data, setData] = useState({
+    name: "Car Tour Africa",
+    store: "Make my Trip",
+    days: 5,
+    price: 650,
+  });
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar />
+      <section className="HomePageImg">
+        <h1>Find Adventure you wana talk about</h1>
+        <input placeholder="Search Tour" />
+      </section>
+
+      <PlaceInfo
+        name={data.name}
+        store={data.store}
+        days={data.days}
+        price={data.price}
+      />
     </div>
   );
 }
