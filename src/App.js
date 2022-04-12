@@ -12,22 +12,41 @@ const initialData = {
 };
 
 function App() {
-    const [data, setData] = useState(initialData); // TODO give correct variable name, not data
-    // Why is data in state, if you're not changing it?
+    const [data, setData] = useState(initialData);
     return (
         <div className="App">
             <NavBar />
-            <section className="HomePageImg">
-                <h1>Find Adventure you wana talk about</h1>
-                <input placeholder="Search Tour" />
-            </section>
-
-            <PlaceInfo
-                name={data.name}
-                store={data.store}
-                days={data.days}
-                price={data.price}
-            />
+            <div className="grid-container">
+                <div className="main-section">
+                    <h1>Find Adventure you wana talk about</h1>
+                    <input placeholder="Search Tour" />
+                </div>
+                <div className="side-nav"></div>
+                <div className="card-info">
+                    <PlaceInfo
+                        name={data.name}
+                        store={data.store}
+                        days={data.days}
+                        price={data.price}
+                    />
+                </div>
+                <div className="card-info">
+                    <PlaceInfo
+                        name={data.name}
+                        store={data.store}
+                        days={data.days}
+                        price={data.price}
+                    />
+                </div>
+                <div className="card-info">
+                    <PlaceInfo
+                        name={data.name}
+                        store={data.store}
+                        days={data.days}
+                        price={data.price}
+                    />
+                </div>
+            </div>
         </div>
     );
 }

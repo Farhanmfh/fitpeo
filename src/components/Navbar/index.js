@@ -1,25 +1,27 @@
 import React from "react";
 import navitems from "./navitems";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
+
+import NavLogo from "../../store/NavLogo.png";
 
 import "./styles.css";
 
 const NavBar = () => {
     return (
         <div className="nav-bar">
-            <a href="/home" className="nav-logo">
+            <a href="#" className="nav-logo">
                 <span>
-                    <img
-                        src="https://www.freepnglogos.com/uploads/plane-png/plane-png-flights-airlines-msp-airport-1.png" // TODO: download this image and store in assets
-                        width="80px"
-                    />
+                    <img src={NavLogo} alt="Logo" width="80px" />
                 </span>
             </a>
             <div className="nav-items">
                 {navitems.map((navItem) => (
                     <a href="#">{navItem}</a>
                 ))}
-                <button className="tour-button">+ Submit a Tour</button>
-                // TODO replace '+' symbol with Icon from "fontawesome"
+                <button className="tour-button">
+                    <FontAwesomeIcon icon={faPlus} /> Submit a Tour
+                </button>
             </div>
         </div>
     );

@@ -1,20 +1,20 @@
 import React from "react";
 
 import "./styles.css";
+import img from '../../store/NavLogo.png'
 
 const PlaceInfo = ({ name, store, days, price }) => {
     return (
         <div>
             <img
-                src={
-                    "https://upload.wikimedia.org/wikipedia/commons/a/af/Flag_of_South_Africa.svg"
-                }
+                src={img}
                 width="200"
             />
             <h3>Name : {name} </h3>
             <h4>Store : {store} </h4>
             Day Tour : {days}
-            {price}
+            <br />
+            $:{price}
         </div>
     );
 };
