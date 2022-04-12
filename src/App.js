@@ -3,16 +3,22 @@ import React, { useState } from "react";
 import "./App.css";
 import PlaceInfo from "./components/PalceCard";
 import NavBar from "./components/Navbar";
-
-const initialData = {
-    name: "Car Tour Africa",
-    store: "Make my Trip",
-    days: 5,
-    price: 650,
-};
+import TourData from "./components/PalceCard/tourDetails";
 
 function App() {
-    const [data, setData] = useState(initialData);
+    const [data, setData] = useState(TourData);
+    let tourCard = data.map((item) => (
+        <div className="card-info">
+            <PlaceInfo
+                key={item.name}
+                name={item.name}
+                store={item.store}
+                days={item.days}
+                price={item.price}
+                img={item.img}
+            />
+        </div>
+    ));
     return (
         <div className="App">
             <NavBar />
@@ -22,30 +28,7 @@ function App() {
                     <input placeholder="Search Tour" />
                 </div>
                 <div className="side-nav"></div>
-                <div className="card-info">
-                    <PlaceInfo
-                        name={data.name}
-                        store={data.store}
-                        days={data.days}
-                        price={data.price}
-                    />
-                </div>
-                <div className="card-info">
-                    <PlaceInfo
-                        name={data.name}
-                        store={data.store}
-                        days={data.days}
-                        price={data.price}
-                    />
-                </div>
-                <div className="card-info">
-                    <PlaceInfo
-                        name={data.name}
-                        store={data.store}
-                        days={data.days}
-                        price={data.price}
-                    />
-                </div>
+                {tourCard}
             </div>
         </div>
     );
