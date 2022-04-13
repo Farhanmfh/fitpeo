@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 
-import PlaceInfo from "../PalceCard";
-import TourData from "../PalceCard/tourDetails";
+import Tour from "../TourCard";
+import tourData from "../TourCard/tourDetails";
 import "./styles.css";
 
 function HomePage() {
@@ -13,16 +13,9 @@ function HomePage() {
                     <input placeholder="Search Tour" />
                 </div>
                 <div className="side-nav"></div>
-                {TourData.map((item) => (
+                {tourData.map((tourDetails) => (
                     <div className="card-info">
-                        <PlaceInfo
-                            key={item.name}
-                            name={item.name}
-                            store={item.store}
-                            days={item.days}
-                            price={item.price}
-                            img={item.img}
-                        />
+                        <Tour tourDetails={tourDetails} />
                     </div>
                 ))}
             </div>

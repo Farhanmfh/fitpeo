@@ -1,4 +1,5 @@
-import React from "react";  
+import React from "react";
+
 import navitems from "./navitems";
 import NavLogo from "../../store/NavLogo.png";
 
@@ -8,13 +9,11 @@ const NavBar = () => {
     return (
         <div className="nav-bar">
             <a href="#" className="nav-logo">
-                <span>
-                    <img src={NavLogo} alt="Logo" width="80px" />
-                </span>
+                <img src={NavLogo} alt="Logo" width="80px" />
             </a>
             <div className="nav-items">
                 {navitems.map((navItem) => (
-                    <a href="#">{navItem}</a>
+                    <a href={navItem.path}>{navItem.title}</a>
                 ))}
                 <button className="tour-button">Submit a Tour</button>
             </div>
