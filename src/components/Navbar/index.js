@@ -1,6 +1,4 @@
-import React from "react";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from "react";  
 import navitems from "./navitems";
 import NavLogo from "../../store/NavLogo.png";
 
@@ -18,9 +16,7 @@ const NavBar = () => {
                 {navitems.map((navItem) => (
                     <a href="#">{navItem}</a>
                 ))}
-                <button className="tour-button">
-                    <FontAwesomeIcon icon={faPlus} /> Submit a Tour
-                </button>
+                <button className="tour-button">Submit a Tour</button>
             </div>
         </div>
     );
