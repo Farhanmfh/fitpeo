@@ -1,0 +1,37 @@
+.grid-container {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.main-section {
+    grid-column: span 4;
+    margin: 0px;
+    padding: 0px;
+    background-image: url("../../store/mainBG.jpg");
+    height: 550px;
+    background-position: center;
+}
+
+.main-section > h1 {
+    font-size: 45px;
+    justify-content: center;
+}
+
+.side-nav {
+    background-image: url("../../store/sideNavBG.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-row: span 2;
+    grid-column: span 1;
+}
+
+.info-card {
+    grid-column: span 1;
+    grid-row: span 4;
+}
+
+.info-card > div {
+    border-style: dotted dashed solid double;
+    box-shadow: 10px 10px 5px lightblue;
+}

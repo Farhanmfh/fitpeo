@@ -1,8 +1,7 @@
 import React from "react";
-import navitems from "./navitems";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import navitems from "./navitems";
 import NavLogo from "../../store/NavLogo.png";
 
 import "./styles.css";
