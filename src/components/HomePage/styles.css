@@ -7,10 +7,9 @@
 .main-section {
     grid-column: span 4;
     margin: 0px;
-    padding: 0px;
+    padding: 120px 80px;
     background-image: url("../../store/mainBG.jpg");
     height: 550px;
-    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -21,19 +20,42 @@
 }
 
 .side-nav {
+    width: 30%;
     background-image: url("../../store/sideNavBG.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    grid-row: span 2;
-    grid-column: span 1;
+    /* grid-row: span 2; */
+    /* grid-column: span 1; */
 }
 
-.info-card {
+/* .info-card {
     grid-column: span 1;
     grid-row: span 4;
-}
+} */
 
 .info-card > div {
     border-style: dotted dashed solid double;
     box-shadow: 10px 10px 5px lightblue;
+}
+
+.homepage_title {
+    color: #fff;
+    font-size: 70px;
+    line-height: 1;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.bottom-section {
+    padding: 80px;
+}
+
+.side-nav-img {
+    width: 30%;
+}
+
+.tour {
+    width: 33%;
+    background-color: red;
+    height: 250px;
 }

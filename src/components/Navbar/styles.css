@@ -1,13 +1,17 @@
 .nav-bar {
-    height: 60px;
+    height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: #7954c5;
+    padding: 0px 80px;
+    position: sticky;
+    top: 0;
 }
 
-.nav-bar > .nav-logo {
-    margin: 50px;
+.nav-bar_logo {
+    width: 100px;
+    margin-top: 10px;
 }
 
 .nav-bar > .nav-items > a {
@@ -19,29 +23,32 @@
     opacity: 0.9;
 }
 
-.nav-bar {
-    position: sticky;
-    top: 0;
-}
-
 .nav-bar > .nav-items > a:hover {
     opacity: 1;
 }
 
 .tour-button {
     text-decoration: none;
-    background-color: #4caf50;
+    background-color: #5cce92;
     border: none;
     color: white;
-    padding: 10px 30px;
-    margin: 15px;
+    padding: 16px 20px;
     text-align: center;
     display: inline-block;
     font-size: 16px;
-    cursor: pointer;
     opacity: 0.9;
+    border-radius: 5px;
 }
 
 .tour-button:hover {
+    cursor: pointer;
     opacity: 1;
+}
+
+.nav-bar_icon-plus {
+    margin-right: 6px;
+}
+
+.nav-bar_icon-angledown {
+    margin-left: 10px;
 }

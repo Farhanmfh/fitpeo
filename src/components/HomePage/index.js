@@ -1,4 +1,8 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
+import sideNavImg from '../../store/sideNavBG.jpg'
+
 
 import Tour from "../TourCard";
 import tourData from "../TourCard/tourDetails";
@@ -7,17 +11,39 @@ import "./styles.css";
 function HomePage() {
     return (
         <div className="App">
-            <div className="grid-container">
-                <div className="main-section">
-                    <h1>Find Adventure you wana talk about</h1>
-                    <input placeholder="Search Tour" />
-                </div>
-                <div className="side-nav"></div>
-                {tourData.map((tourDetails) => (
-                    <div className="card-info">
-                        <Tour tourDetails={tourDetails} />
+            <div className="main-section">
+                <div style={{ display: 'flex' }}>
+                    <div style={{ width: '40%' }}>
+                        <h1 className="homepage_title">Find <b><i>Adventures</i></b>, you want talk about</h1>
                     </div>
-                ))}
+                    <div style={{ width: '60%', textAlign: 'right' }}>
+                        <button className="tour-button">
+                            <span>How it Works</span>
+                            <FontAwesomeIcon icon={faAngleRight} />
+                        </button>
+                    </div>
+                </div>
+                <input placeholder="Search Tour" />
+            </div>
+            <div className="bottom-section">
+                <h2><b><i>Required</i></b> to Visit</h2>
+                <div style={{ display: 'flex' }}>
+                    <img src={sideNavImg} className="side-nav-img" />
+                    <div style={{ display: 'flex', width: '70%' }}>
+                        <div className="tour">
+                        </div>
+                        <div className="tour">
+                        </div>
+                        <div className="tour">
+                        </div>
+                    </div>
+                </div>
+                {/* <div className="side-nav"></div>
+                    {tourData.map((tourDetails) => (
+                        <div className="card-info">
+                            <Tour tourDetails={tourDetails} />
+                        </div>
+                    ))} */}
             </div>
         </div>
     );
