@@ -54,8 +54,11 @@
     width: 30%;
 }
 
+.tour-info {
+    margin-left: 5%;
+    justify-content: space-between;
+}
+
 .tour {
-    width: 33%;
-    background-color: red;
     height: 250px;
 }

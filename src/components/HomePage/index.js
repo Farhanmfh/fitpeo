@@ -1,8 +1,7 @@
 import React from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
-import sideNavImg from '../../store/sideNavBG.jpg'
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import sideNavImg from "../../store/sideNavBG.jpg";
 
 import Tour from "../TourCard";
 import tourData from "../TourCard/tourDetails";
@@ -12,11 +11,17 @@ function HomePage() {
     return (
         <div className="App">
             <div className="main-section">
-                <div style={{ display: 'flex' }}>
-                    <div style={{ width: '40%' }}>
-                        <h1 className="homepage_title">Find <b><i>Adventures</i></b>, you want talk about</h1>
+                <div style={{ display: "flex" }}>
+                    <div style={{ width: "40%" }}>
+                        <h1 className="homepage_title">
+                            Find{" "}
+                            <b>
+                                <i>Adventures</i>
+                            </b>
+                            , you want talk about
+                        </h1>
                     </div>
-                    <div style={{ width: '60%', textAlign: 'right' }}>
+                    <div style={{ width: "60%", textAlign: "right" }}>
                         <button className="tour-button">
                             <span>How it Works</span>
                             <FontAwesomeIcon icon={faAngleRight} />
@@ -26,24 +31,27 @@ function HomePage() {
                 <input placeholder="Search Tour" />
             </div>
             <div className="bottom-section">
-                <h2><b><i>Required</i></b> to Visit</h2>
-                <div style={{ display: 'flex' }}>
+                <h2 style={{ fontSize: "45px", marginBottom: "20px" }}>
+                    <b>
+                        <i>Required</i>
+                    </b>{" "}
+                    to Visit
+                </h2>
+                <div style={{ display: "flex" }}>
                     <img src={sideNavImg} className="side-nav-img" />
-                    <div style={{ display: 'flex', width: '70%' }}>
-                        <div className="tour">
-                        </div>
-                        <div className="tour">
-                        </div>
-                        <div className="tour">
-                        </div>
+                    <div
+                        className="tour-info"
+                        style={{ display: "flex", width: "60%" }}
+                    >
+                        {tourData.map((tourDetails) => (
+                            <div className="tour">
+                                <Tour tourDetails={tourDetails} />
+                            </div>
+                        ))}
                     </div>
                 </div>
                 {/* <div className="side-nav"></div>
-                    {tourData.map((tourDetails) => (
-                        <div className="card-info">
-                            <Tour tourDetails={tourDetails} />
-                        </div>
-                    ))} */}
+                 */}
             </div>
         </div>
     );
