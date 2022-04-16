@@ -50,8 +50,6 @@ function HomePage() {
                         ))}
                     </div>
                 </div>
-                {/* <div className="side-nav"></div>
-                 */}
             </div>
         </div>
     );

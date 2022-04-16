@@ -24,18 +24,6 @@
     background-image: url("../../store/sideNavBG.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    /* grid-row: span 2; */
-    /* grid-column: span 1; */
-}
-
-/* .info-card {
-    grid-column: span 1;
-    grid-row: span 4;
-} */
-
-.info-card > div {
-    border-style: dotted dashed solid double;
-    box-shadow: 10px 10px 5px lightblue;
 }
 
 .homepage_title {

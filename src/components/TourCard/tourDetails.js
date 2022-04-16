@@ -8,6 +8,7 @@ const tourPlaces = [
         store: "Make my Trip",
         days: 5,
         price: 650,
+        guests:"10 People",
         img: img3,
     },
     {
@@ -15,6 +16,7 @@ const tourPlaces = [
         store: "Trip easy for you",
         days: 7,
         price: 900,
+        guests:"Couple",
         img: img2,
     },
     {
@@ -22,6 +24,7 @@ const tourPlaces = [
         store: "Tipvisor",
         days: 15,
         price: 1250,
+        guests:"4 People",
         img: img1,
     },
 ];
