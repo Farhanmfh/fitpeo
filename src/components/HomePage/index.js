@@ -41,7 +41,7 @@ function HomePage() {
                     <div className="search-button">
                         <FontAwesomeIcon
                             icon={faMagnifyingGlass}
-                            className="search-field-arrow-right"
+                            className="icon-search"
                         />
                     </div>
                 </div>

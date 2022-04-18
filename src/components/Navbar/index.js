@@ -21,7 +21,7 @@ const NavBar = () => {
                         </a>
                     </>
                 ))}
-                <button className="tour-button">
+                <button className="tour-button-nav">
                     <FontAwesomeIcon icon={faPlus} className="nav-bar_icon-plus" />
                     <span>Submit a Tour</span>
                 </button>

@@ -15,42 +15,50 @@ const Tour = ({ tourDetails }) => {
     const { name, store, days, guests, price, img } = tourDetails;
     return (
         <div className="info-card">
-            <img src={img} height="200px" width="300px" />
+            <img src={img} className="tour-image" />
             <div className="container">
                 <h3>
                     <FontAwesomeIcon
+                        className="icon-flame"
                         icon={faFireFlameCurved}
-                        style={{ color: "#b73846" }}
                     />
                     {name}
                 </h3>
-                <span>Store </span>
-                <h5 style={{ color: "#84c2c7", display: "inline" }}>
+                <div>
+                    <span>Store </span>
+                    <span className="store-info">
+                        <FontAwesomeIcon className="icon-gem" icon={faGem} />
+                        {store}
+                    </span>
+                </div>
+                <div>
                     <FontAwesomeIcon
-                        icon={faGem}
-                        style={{ color: "#b73846" }}
+                        className="icon-group-clock"
+                        icon={faPeopleGroup}
                     />
-                    {store}
-                </h5>
-                <FontAwesomeIcon
-                    style={{ color: "#f4a60e" }}
-                    icon={faPeopleGroup}
-                />
-                {guests}
-                <FontAwesomeIcon style={{ color: "#f4a60e" }} icon={faClock} />
-                {days}
-                Days Tour
-                <h3 style={{ color: "red", paddingTop: "10px" }}>
+                    {guests}
+                </div>
+
+                <div>
                     <FontAwesomeIcon
-                        style={{ color: "#8080806b", opacity: "40%" }}
-                        icon={faHeart}
+                        className="icon-group-clock"
+                        icon={faClock}
                     />
-                    <FontAwesomeIcon
-                        style={{ color: "#8080806b", opacity: "40%" }}
-                        icon={faSnowflake}
-                    />
-                    <span style={{ marginLeft: "60%" }}>${price}</span>
-                </h3>
+                    {days}
+                </div>
+                <div className="price-info">
+                    <div className="price-info-icons">
+                        <FontAwesomeIcon
+                            className="icon-price"
+                            icon={faHeart}
+                        />
+                        <FontAwesomeIcon
+                            className="icon-price"
+                            icon={faSnowflake}
+                        />
+                    </div>
+                    <div className="price-tag">${price}</div>
+                </div>
             </div>
         </div>
     );
