@@ -4,6 +4,7 @@ import HomePage from "./components/HomePage";
 import NavBar from "./components/Navbar";
 
 import "./App.css";
+import Tour from "./components/Tour";
 
 function App() {
     return (
@@ -12,9 +13,10 @@ function App() {
                 <NavBar />
                 <Routes>
                     <Route exact path="/" element={<HomePage />} />
+                    <Route exact path="/tour/:tourId" element={<Tour />} />
                 </Routes>
             </Router>
-        </div>  
+        </div>
     );
 }
 

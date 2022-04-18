@@ -1,5 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useNavigate } from "react-router-dom";
 import {
     faAngleRight,
     faArrowRight,
@@ -8,10 +9,15 @@ import {
 
 import sideNavImg from "../../store/sideNavBG.jpg";
 import Tour from "../TourCard";
-import tourData from "../TourCard/tourDetails";
+import tourData from "../TourCard/dummyTourData";
 import "./styles.css";
 
 function HomePage() {
+    const navigate = useNavigate();
+    const handleTourClick = (tourId) => {
+        navigate(`/tour/${tourId}`);
+    };
+
     return (
         <div className="App">
             <div className="main-section">
@@ -60,7 +66,11 @@ function HomePage() {
                         style={{ display: "flex", width: "60%" }}
                     >
                         {tourData.map((tourDetails) => (
-                            <div className="tour">
+                            <div
+                                className="tour"
+                                key={tourDetails.id}
+                                onClick={() => handleTourClick(tourDetails.id)}
+                            >
                                 <Tour tourDetails={tourDetails} />
                             </div>
                         ))}

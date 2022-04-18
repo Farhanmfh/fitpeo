@@ -12,6 +12,7 @@
 .nav-bar_logo {
     width: 100px;
     margin-top: 10px;
+    cursor: pointer;
 }
 
 .nav-bar > .nav-items > a {
