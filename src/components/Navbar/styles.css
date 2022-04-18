@@ -41,7 +41,7 @@
     border-radius: 5px;
 }
 
-.tour-button:hover {
+.tour-button-nav:hover {
     cursor: pointer;
     opacity: 1;
 }

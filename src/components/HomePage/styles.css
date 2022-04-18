@@ -14,6 +14,19 @@
     background-size: cover;
 }
 
+.main-title-div {
+    display: flex;
+}
+
+.main-title-text {
+    width: 40%;
+}
+
+.dashboad-button {
+    width: 60%;
+    text-align: right;
+}
+
 .main-section > h1 {
     font-size: 45px;
     justify-content: center;
@@ -38,12 +51,20 @@
     padding: 80px;
 }
 
+.bottom-section,
+h2 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
 .side-nav-img {
     width: 30%;
 }
 
 .tour-info {
     margin-left: 5%;
+    display: flex;
+    width: 60%;
 }
 
 .tour {
@@ -62,6 +83,11 @@
     font-size: 16px;
     opacity: 0.9;
     border-radius: 5px;
+}
+
+.tour-button:hover {
+    cursor: pointer;
+    opacity: 1;
 }
 
 .search-field-card {
@@ -99,4 +125,7 @@
 .icon-search {
     margin: 10px;
     color: #fff;
+}
+.icon-AngleRight {
+    margin-left: 5px;
 }

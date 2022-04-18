@@ -21,8 +21,8 @@ function HomePage() {
     return (
         <div className="App">
             <div className="main-section">
-                <div style={{ display: "flex" }}>
-                    <div style={{ width: "40%" }}>
+                <div className="main-title-div">
+                    <div className="main-title-text">
                         <h1 className="homepage_title">
                             Find{" "}
                             <b>
@@ -31,10 +31,13 @@ function HomePage() {
                             , you want talk about
                         </h1>
                     </div>
-                    <div style={{ width: "60%", textAlign: "right" }}>
+                    <div className="dashboad-button">
                         <button className="tour-button">
                             <span>How it Works</span>
-                            <FontAwesomeIcon icon={faAngleRight} />
+                            <FontAwesomeIcon
+                                icon={faAngleRight}
+                                className="icon-AngleRight"
+                            />
                         </button>
                     </div>
                 </div>
@@ -53,7 +56,7 @@ function HomePage() {
                 </div>
             </div>
             <div className="bottom-section">
-                <h2 style={{ fontSize: "45px", marginBottom: "20px" }}>
+                <h2>
                     <b>
                         <i>Required</i>
                     </b>{" "}
@@ -61,10 +64,7 @@ function HomePage() {
                 </h2>
                 <div style={{ display: "flex" }}>
                     <img src={sideNavImg} className="side-nav-img" />
-                    <div
-                        className="tour-info"
-                        style={{ display: "flex", width: "60%" }}
-                    >
+                    <div className="tour-info">
                         {tourData.map((tourDetails) => (
                             <div
                                 className="tour"

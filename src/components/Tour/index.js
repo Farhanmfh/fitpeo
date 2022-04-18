@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import tourPlaces from "../TourCard/dummyTourData";
 
+import "./styles.css";
+
 const Tour = () => {
     const [tourDetails, setTourDetails] = useState();
     const params = useParams();
@@ -14,7 +16,14 @@ const Tour = () => {
         setTourDetails(currentTourDetails);
     }, []);
 
-    return <div>{tourDetails && tourDetails.name}</div>;
+    console.log(tourDetails);
+    return (
+        <div className="sample-page">
+            <h1>{tourDetails && tourDetails.name} </h1>
+            {tourDetails && <img src={tourDetails.img} /> }
+            
+        </div>
+    );
 };
 
 export default Tour;
