@@ -1,8 +1,12 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
-import sideNavImg from "../../store/sideNavBG.jpg";
+import {
+    faAngleRight,
+    faArrowRight,
+    faMagnifyingGlass,
+} from "@fortawesome/free-solid-svg-icons";
 
+import sideNavImg from "../../store/sideNavBG.jpg";
 import Tour from "../TourCard";
 import tourData from "../TourCard/tourDetails";
 import "./styles.css";
@@ -28,7 +32,19 @@ function HomePage() {
                         </button>
                     </div>
                 </div>
-                <input placeholder="Search Tour" />
+                <div className="search-field-card">
+                    <FontAwesomeIcon
+                        icon={faArrowRight}
+                        className="search-field-arrow-right"
+                    />
+                    <input placeholder="Search Tour" className="search-field" />
+                    <div className="search-button">
+                        <FontAwesomeIcon
+                            icon={faMagnifyingGlass}
+                            className="search-field-arrow-right"
+                        />
+                    </div>
+                </div>
             </div>
             <div className="bottom-section">
                 <h2 style={{ fontSize: "45px", marginBottom: "20px" }}>

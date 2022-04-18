@@ -21,7 +21,7 @@ const Tour = ({ tourDetails }) => {
                     <FontAwesomeIcon
                         icon={faFireFlameCurved}
                         style={{ color: "#b73846" }}
-                    />{" "}
+                    />
                     {name}
                 </h3>
                 <span>Store </span>
@@ -29,23 +29,17 @@ const Tour = ({ tourDetails }) => {
                     <FontAwesomeIcon
                         icon={faGem}
                         style={{ color: "#b73846" }}
-                    />{" "}
-                    {store}{" "}
+                    />
+                    {store}
                 </h5>
-                <br />
                 <FontAwesomeIcon
                     style={{ color: "#f4a60e" }}
                     icon={faPeopleGroup}
-                />{" "}
+                />
                 {guests}
-                <br />
-                <FontAwesomeIcon
-                    style={{ color: "#f4a60e" }}
-                    icon={faClock}
-                />{" "}
+                <FontAwesomeIcon style={{ color: "#f4a60e" }} icon={faClock} />
                 {days}
-                {" Days Tour"}
-                <br />
+                Days Tour
                 <h3 style={{ color: "red", paddingTop: "10px" }}>
                     <FontAwesomeIcon
                         style={{ color: "#8080806b", opacity: "40%" }}
